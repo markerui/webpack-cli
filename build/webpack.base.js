@@ -1,17 +1,19 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const VueLoaderConf = require('./vue-loader.conf')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/main.js'
+        app: './src/main.js',
+        // vendor2: ['vue', 'vue-router', 'axios']
     },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, '../dist')
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.js', '.vue', '.json', '.md'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': path.resolve(__dirname, '../src'),
@@ -32,11 +34,30 @@ module.exports = {
                 )
             },
             {
-                test: /\.(css|sass|less)$/,
+                test: /\.css$/,
+                use: [
+                    'vue-style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.scss$/,
                 use: [
                     'vue-style-loader',
                     'css-loader',
-                    'sass-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
                     'less-loader'
                 ]
             },
@@ -45,18 +66,41 @@ module.exports = {
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        limit: 10000
+                        limit: 10000,
+                        name: 'static/images/[name].[hash:7].[ext]',
                     }
                 }]
+            },
+            {
+                test: /\.(woff2|woff|eot|ttf|otf)(\?.*)?$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000,
+                        name: 'static/fonts/[name].[hash:7].[ext]',
+                    }
+                }]
+            },
+            {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: 'static/media/[name].[hash:7].[ext]',
+                }
+            },
+            {
+                test: /\.md$/,
+                loader: 'vue-markdown-loader'
             }
         ]
     },
     plugins: [
-        new VueLoaderPlugin()
-        // new CleanWebpackPlugin(['dist']),
-        // new HtmlWebpackPlugin({
-        //     title: 'Prodution'
-        // })
+        new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html',
+        })
     ]
 
 };
