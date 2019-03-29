@@ -13,7 +13,12 @@ module.exports = merge(common, {
                 MiniCssExtractPlugin.loader,
                 'css-loader'
             ]
-        }, ]
+        }, {
+            test: /\.style$/,
+            use: [
+                'css-loader'
+            ]
+        }]
     },
     plugins: [
         new CleanWebpackPlugin(),

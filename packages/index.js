@@ -1,9 +1,9 @@
-import mAlert from './alert/index'
-import mkNavBar from './NavBar/index'
+import mkNavBar from './navbar/index'
+import Flex from './flex/index'
 
 const components = [
-    mAlert,
-    mkNavBar
+    mkNavBar,
+    Flex
 ]
 
 // 导出 install 函数
@@ -21,6 +21,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
     install,
-    mAlert,
-    mkNavBar
+    mkNavBar,
+    Flex
 }

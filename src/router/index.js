@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/Index'
-import About from '@/pages/About'
+import flex from '@/pages/Flex'
 
 Vue.use(Router)
 
@@ -12,9 +12,9 @@ export default new Router({
             component: Index
         },
         {
-            path: '/About',
-            name: 'About',
-            component: About
+            path: '/flex',
+            name: 'flex',
+            component: flex
         }
     ]
 })
