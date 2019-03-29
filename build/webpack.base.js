@@ -88,10 +88,6 @@ module.exports = {
                     limit: 10000,
                     name: 'static/media/[name].[hash:7].[ext]',
                 }
-            },
-            {
-                test: /\.md$/,
-                loader: 'vue-markdown-loader'
             }
         ]
     },
