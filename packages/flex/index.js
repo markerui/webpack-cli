@@ -1,7 +1,7 @@
 import Flex from './src/index.vue';
 
 Flex.install = function (Vue) {
-    Vue.component(Flex.name, mAlert);
+    Vue.component(Flex.name, Flex);
 };
 
 export default Flex;

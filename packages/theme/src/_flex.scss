@@ -69,4 +69,77 @@
     &.align-items-stretch {
         align-items: stretch; //d
     }
+
+    &.align-content-start {
+        align-content: flex-start;
+    }
+
+    &.align-content-end {
+        align-content: flex-end;
+    }
+
+    &.align-content-center {
+        align-content: center;
+    }
+
+    &.align-content-space-between {
+        align-content: space-between;
+    }
+
+    &.align-content-space-around {
+        align-content: space-around;
+    }
+
+    &.align-content-stretch {
+        align-content: stretch;
+    }
+
+    @for $i from -1 through 10 {
+        @if $i==-1 {
+            .flex-order-100 {
+                order: $i;
+            }
+        }
+
+        @else {
+            .flex-order-#{$i} {
+                order: $i;
+            }
+        }
+    }
+
+    @for $i from 0 through 10 {
+        .flex-grow-#{$i} {
+            flex-grow: $i;
+        }
+    }
+
+    @for $i from 0 through 1 {
+        .flex-shrink-#{$i} {
+            flex-shrink: $i;
+        }
+    }
+
+    .align-self-start {
+        align-self: flex-start;
+    }
+
+    .align-self-end {
+        align-self: flex-end;
+    }
+
+    .align-self-center {
+        align-self: center;
+    }
+
+    .align-self-baseline {
+        align-self: baseline;
+    }
+
+    .align-self-stretch {
+        align-self: stretch;
+    }
+
+
+
 }
