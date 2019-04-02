@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <mk-flex class="container">
-      <mk-item width="210px" style="flex-grow: 1;">
+      <mk-item width="210px">
         <ul>
           <li>
             <router-link to="/init">Init</router-link>
@@ -17,7 +17,7 @@
           </li>
         </ul>
       </mk-item>
-      <mk-item class="flex-grow-1">
+      <mk-item>
         <router-view></router-view>
       </mk-item>
     </mk-flex>

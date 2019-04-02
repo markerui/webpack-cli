@@ -8,6 +8,11 @@
     @include box-sizing(border-box);
 }
 
+* {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
 // Body reset
 
 html {
