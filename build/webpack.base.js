@@ -2,6 +2,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const VueLoaderConf = require('./vue-loader.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const hljs = require('highlight.js');
 
 module.exports = {
     entry: {
@@ -17,6 +18,11 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': path.resolve(__dirname, '../src'),
+        }
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
         }
     },
     module: {
@@ -42,7 +48,8 @@ module.exports = {
                         options: {
                             importLoaders: 1
                         }
-                    }
+                    },
+                    'postcss-loader'
                 ]
             },
             {
@@ -88,6 +95,33 @@ module.exports = {
                     limit: 10000,
                     name: 'static/media/[name].[hash:7].[ext]',
                 }
+            },
+            {
+                test: /\.md$/,
+                exclude: /(node_modules|bower_components)/,
+                use: [
+                    'vue-loader',
+                    {
+                        loader: 'markdown-to-vue-loader',
+                        options: {
+                            componentNamespace: 'mkui',
+                            componentWrapper: '<section class="mkui-demo"></section>',
+                            tableClass: 'mkui-table',
+                            preClass: 'mkui-code',
+                            markdownItOptions: {
+                                typographer: false,
+                                highlight(str, lang) {
+                                    if (lang && hljs.getLanguage(lang)) {
+                                        try {
+                                            return hljs.highlight(lang, str).value;
+                                        } catch (__) {}
+                                    }
+                                    return ''; // use external default escaping
+                                },
+                            }
+                        },
+                    },
+                ],
             }
         ]
     },

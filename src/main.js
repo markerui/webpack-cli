@@ -3,6 +3,7 @@ import App from './App'
 import router from './router'
 import mkui from '../packages/index'
 import '../packages/theme/src/index.scss';
+import 'highlight.js/styles/github.css';
 
 Vue.config.productionTip = false
 Vue.use(mkui)
