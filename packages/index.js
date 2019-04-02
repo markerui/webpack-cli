@@ -1,11 +1,9 @@
 import Item from './item/index'
 import Flex from './flex/index'
-import mkNavBar from './navbar/index'
 
 const components = [
     Item,
     Flex,
-    mkNavBar
 ]
 
 // 导出 install 函数
@@ -24,6 +22,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
     install,
     Item,
-    Flex,
-    mkNavBar
+    Flex
 }

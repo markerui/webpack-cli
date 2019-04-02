@@ -5,6 +5,10 @@ Vue.use(Router)
 
 export default new Router({
     routes: [{
+            path: '/init',
+            name: 'init',
+            component: () => import('@/doc/init.md')
+        }, {
             path: '/start',
             name: 'start',
             component: () => import('@/doc/start.md')

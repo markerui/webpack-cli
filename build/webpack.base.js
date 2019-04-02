@@ -117,11 +117,11 @@ module.exports = {
                                         } catch (__) {}
                                     }
                                     return ''; // use external default escaping
-                                },
+                                }
                             }
                         },
                     },
-                ],
+                ]
             }
         ]
     },

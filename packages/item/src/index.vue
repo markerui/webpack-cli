@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "item",
+  name: "mkItem",
   props: {
     width: {
       type: String
