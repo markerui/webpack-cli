@@ -17,7 +17,7 @@
           </li>
         </ul>
       </mk-item>
-      <mk-item>
+      <mk-item class="flex-grow-1" width="0">
         <router-view></router-view>
       </mk-item>
     </mk-flex>

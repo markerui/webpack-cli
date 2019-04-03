@@ -1,5 +1,5 @@
 <template>
-  <div :style="{flexBasis:width,height:height}">
+  <div :style="{flexBasis:flexWidth,height:height,width:width}">
     <slot></slot>
   </div>
 </template>
@@ -8,6 +8,9 @@ export default {
   name: "mkItem",
   props: {
     width: {
+      type: String
+    },
+    flexWidth: {
       type: String
     },
     height: {

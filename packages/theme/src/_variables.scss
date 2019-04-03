@@ -1,8 +1,21 @@
 // Color system
-$color-white: #fff;
-$color-default:#767676;
-$color-primary: #337ab7;
-$color-success: #5cb85c;
-$color-info: #46b8da;
-$color-warning: #f0ad4e;
-$color-danger: #d9534f;
+$color-white: #fff !default;
+$color-default:#767676 !default;
+$color-primary: #337ab7 !default;
+$color-success: #5cb85c !default;
+$color-info: #46b8da !default;
+$color-warning: #f0ad4e !default;
+$color-danger: #d9534f !default;
+
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-size-base: 14px !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small: ceil(($font-size-base * .85)) !default; // ~12px
+
+$font-size-h1: floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * .85)) !default; // ~12px

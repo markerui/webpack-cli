@@ -19,80 +19,80 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    color: $text-color;
-    background-color: $body-bg;
-}
+// body {
+//     font-family: $font-family-base;
+//     font-size: $font-size-base;
+//     line-height: $line-height-base;
+//     color: $text-color;
+//     background-color: $body-bg;
+// }
 
-// Reset fonts for relevant elements
-input,
-button,
-select,
-textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-
-// Links
-
-a {
-    color: $link-color;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-        color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
-    }
-}
+// // Reset fonts for relevant elements
+// input,
+// button,
+// select,
+// textarea {
+//     font-family: inherit;
+//     font-size: inherit;
+//     line-height: inherit;
+// }
 
 
-// Figures
-//
-// We reset this here because previously Normalize had no `figure` margins. This
-// ensures we don't break anyone's use of the element.
+// // Links
 
-figure {
-    margin: 0;
-}
+// a {
+//     color: $link-color;
+//     text-decoration: none;
+
+//     &:hover,
+//     &:focus {
+//         color: $link-hover-color;
+//         text-decoration: $link-hover-decoration;
+//     }
+// }
 
 
-// Images
+// // Figures
+// //
+// // We reset this here because previously Normalize had no `figure` margins. This
+// // ensures we don't break anyone's use of the element.
 
-img {
-    vertical-align: middle;
-}
+// figure {
+//     margin: 0;
+// }
 
-// Responsive images (ensure images don't scale beyond their parents)
-.img-responsive {
-    @include img-responsive;
-}
 
-// Rounded corners
-.img-rounded {
-    border-radius: $border-radius-large;
-}
+// // Images
 
-// Perfect circle
-.img-circle {
-    border-radius: 50%; // set radius in percents
-}
+// img {
+//     vertical-align: middle;
+// }
 
-// Horizontal rules
+// // Responsive images (ensure images don't scale beyond their parents)
+// .img-responsive {
+//     @include img-responsive;
+// }
 
-hr {
-    margin-top: $line-height-computed;
-    margin-bottom: $line-height-computed;
-    border: 0;
-    border-top: 1px solid $hr-border;
-}
+// // Rounded corners
+// .img-rounded {
+//     border-radius: $border-radius-large;
+// }
 
-// iOS "clickable elements" fix for role="button"
-[role="button"] {
-    cursor: pointer;
-}
+// // Perfect circle
+// .img-circle {
+//     border-radius: 50%; // set radius in percents
+// }
+
+// // Horizontal rules
+
+// hr {
+//     margin-top: $line-height-computed;
+//     margin-bottom: $line-height-computed;
+//     border: 0;
+//     border-top: 1px solid $hr-border;
+// }
+
+// // iOS "clickable elements" fix for role="button"
+// [role="button"] {
+//     cursor: pointer;
+// }
