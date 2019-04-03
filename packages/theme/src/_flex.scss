@@ -1,6 +1,12 @@
 .mk-flex {
     display: flex;
 
+    * {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
     &.flex-direction-row {
         flex-direction: row; //d
     }

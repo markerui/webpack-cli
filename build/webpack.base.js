@@ -1,8 +1,8 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const VueLoaderConf = require('./vue-loader.conf')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const hljs = require('highlight.js');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const hljs = require('highlight.js')
 
 module.exports = {
     entry: {
@@ -11,18 +11,14 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, '../dist')
+        path: path.resolve(__dirname, '../dist'),
+        publicPath: '',
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json', '.scss'],
+        extensions: ['.js', '.vue', '.json', '.scss', '.less', '.css'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': path.resolve(__dirname, '../src'),
-        }
-    },
-    optimization: {
-        splitChunks: {
-            chunks: 'all'
         }
     },
     module: {
@@ -43,20 +39,16 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     'vue-style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1
-                        }
-                    },
+                    'css-loader',
                     'postcss-loader'
                 ]
             },
             {
-                test: /\.scss$/,
+                test: /\.s[ac]ss$/,
                 use: [
                     'vue-style-loader',
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ]
             },
@@ -65,6 +57,7 @@ module.exports = {
                 use: [
                     'vue-style-loader',
                     'css-loader',
+                    'postcss-loader',
                     'less-loader'
                 ]
             },
@@ -74,7 +67,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 10000,
-                        name: 'static/images/[name].[hash:7].[ext]',
+                        name: 'images/[name].[hash:7].[ext]',
                     }
                 }]
             },
@@ -84,7 +77,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 10000,
-                        name: 'static/fonts/[name].[hash:7].[ext]',
+                        name: 'fonts/[name].[hash:7].[ext]',
                     }
                 }]
             },
@@ -93,7 +86,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: 'static/media/[name].[hash:7].[ext]',
+                    name: 'media/[name].[hash:7].[ext]',
                 }
             },
             {
