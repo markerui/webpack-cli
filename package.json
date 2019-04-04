@@ -31,6 +31,8 @@
     "postcss-minify-font-values": "^4.0.2",
     "postcss-minify-gradients": "^4.0.2",
     "postcss-minify-selectors": "^4.0.2",
+    "postcss-px-to-viewport": "^1.1.0",
+    "postcss-url": "^8.0.0",
     "sass-loader": "^7.1.0",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "url-loader": "^1.1.2",

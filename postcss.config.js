@@ -1,10 +1,15 @@
 module.exports = {
     // parser: 'sugarss',
-    plugins: [
-        require('autoprefixer'),
-        require('postcss-minify-gradients'),
-        require('postcss-minify-selectors'),
-        require('postcss-minify-font-values'),
-        require('postcss-import')
-    ]
+    "plugins": {
+        "postcss-import": {},
+        "postcss-url": {},
+        "autoprefixer": {},
+        "postcss-minify-gradients": {},
+        "postcss-minify-selectors": {},
+        "postcss-minify-font-values": {},
+        "postcss-px-to-viewport": {
+            viewportWidth: 750,
+            landscapeWidth: 1334
+        }
+    }
 }

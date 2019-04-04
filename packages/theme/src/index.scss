@@ -1,6 +1,5 @@
-@import 'normalize';
-@import 'mixins';
-@import 'type';
-@import 'scaffolding';
-@import 'variables';
-@import 'flex';
+@import 'normalize'; //normalize库
+@import 'variables'; //定义变量
+@import 'mixins'; //mixins方法
+@import 'scaffolding'; //重置样式
+@import 'flex'; //flex布局

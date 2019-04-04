@@ -8,34 +8,25 @@
     @include box-sizing(border-box);
 }
 
-* {
-    word-break: break-all;
-    word-wrap: break-word;
-}
-
 // Body reset
 
 html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-// body {
-//     font-family: $font-family-base;
-//     font-size: $font-size-base;
-//     line-height: $line-height-base;
-//     color: $text-color;
-//     background-color: $body-bg;
-// }
+body {
+    font-size: $font-size-base;
+}
 
 // // Reset fonts for relevant elements
-// input,
-// button,
-// select,
-// textarea {
-//     font-family: inherit;
-//     font-size: inherit;
-//     line-height: inherit;
-// }
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
 
 
 // // Links
