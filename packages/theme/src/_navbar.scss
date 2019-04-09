@@ -1,0 +1,12 @@
+.mk-navbar {
+    @include border1px(#000);
+    @include vwHeight(44);
+    background-color: #f0f0ff;
+    align-items: center;
+    align-content: center;
+
+    .navbar-title {
+        @include vwFont($navbar-title-font-size);
+        margin: 0;
+    }
+}

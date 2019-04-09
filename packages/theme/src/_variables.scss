@@ -1,3 +1,6 @@
+//base 
+$vw_base: 375;
+
 // Color system
 $color-white: #fff !default;
 $color-default:#767676 !default;
@@ -7,5 +10,9 @@ $color-info: #46b8da !default;
 $color-warning: #f0ad4e !default;
 $color-danger: #d9534f !default;
 
-//## Font, line-height, and color for body text, headings, and more.
-$font-size-base: 0.018px !default;
+//## Font
+$font-size-base: 14 !default;
+
+//## navbar 
+$navbar-height: 44 !default;
+$navbar-title-font-size: $font-size-base+2 !default;

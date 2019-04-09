@@ -7,9 +7,5 @@ module.exports = {
         "postcss-minify-gradients": {},
         "postcss-minify-selectors": {},
         "postcss-minify-font-values": {},
-        "postcss-px-to-viewport": {
-            viewportWidth: 750,
-            landscapeWidth: 1334
-        }
     }
 }

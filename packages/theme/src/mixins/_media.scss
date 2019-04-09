@@ -1,0 +1,32 @@
+// vw mixin
+@mixin vwFont($fontSize) {
+    font-size: $fontSize * 1px;
+
+    @media (max-width: 750px) and (orientation: portrait) {
+        font-size: vw($fontSize);
+    }
+}
+
+@mixin vwWidth($width) {
+    width: $width * 1px;
+
+    @media (max-width: 750px) and (orientation: portrait) {
+        width: vw($width);
+    }
+}
+
+@mixin vwHeight($height) {
+    height: $height * 1px;
+
+    @media (max-width: 750px) and (orientation: portrait) {
+        height: vw($height);
+    }
+}
+
+@mixin vwPadding($direction, $size) {
+    padding-#{$direction}: $size*1px;
+
+    @media (max-width: 750px) and (orientation: portrait) {
+        padding-#{$direction}: vw($size);
+    }
+}

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <mk-flex class="container">
+    <mk-navbar title="网站标题"></mk-navbar>
+    <!-- <mk-flex class="container">
       <mk-item width="210px">
         <ul>
           <li>
@@ -20,7 +21,8 @@
       <mk-item class="flex-grow-1" width="0">
         <router-view></router-view>
       </mk-item>
-    </mk-flex>
+    </mk-flex>-->
+    <router-view></router-view>
   </div>
 </template>
 

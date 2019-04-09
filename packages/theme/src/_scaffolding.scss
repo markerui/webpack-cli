@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-size: $font-size-base;
+    @include vwFont($font-size-base);
 }
 
 // // Reset fonts for relevant elements
@@ -29,61 +29,7 @@ textarea {
 }
 
 
-// // Links
-
-// a {
-//     color: $link-color;
-//     text-decoration: none;
-
-//     &:hover,
-//     &:focus {
-//         color: $link-hover-color;
-//         text-decoration: $link-hover-decoration;
-//     }
-// }
-
-
-// // Figures
-// //
-// // We reset this here because previously Normalize had no `figure` margins. This
-// // ensures we don't break anyone's use of the element.
-
-// figure {
-//     margin: 0;
-// }
-
-
-// // Images
-
-// img {
-//     vertical-align: middle;
-// }
-
-// // Responsive images (ensure images don't scale beyond their parents)
-// .img-responsive {
-//     @include img-responsive;
-// }
-
-// // Rounded corners
-// .img-rounded {
-//     border-radius: $border-radius-large;
-// }
-
-// // Perfect circle
-// .img-circle {
-//     border-radius: 50%; // set radius in percents
-// }
-
-// // Horizontal rules
-
-// hr {
-//     margin-top: $line-height-computed;
-//     margin-bottom: $line-height-computed;
-//     border: 0;
-//     border-top: 1px solid $hr-border;
-// }
-
-// // iOS "clickable elements" fix for role="button"
-// [role="button"] {
-//     cursor: pointer;
-// }
+.block {
+    @include vwPadding('left', 15);
+    @include vwPadding('right', 15);
+}

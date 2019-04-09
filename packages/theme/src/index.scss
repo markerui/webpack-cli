@@ -1,5 +1,8 @@
-@import 'normalize'; //normalize库
+@import 'normalize.css'; //normalize库
 @import 'variables'; //定义变量
+@import 'function'; //定义方法
 @import 'mixins'; //mixins方法
+@import 'utilities'; //mixins方法
 @import 'scaffolding'; //重置样式
 @import 'flex'; //flex布局
+@import 'navbar'; //flex布局

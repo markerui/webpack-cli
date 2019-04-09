@@ -22,6 +22,10 @@ export default new Router({
             path: '/form',
             name: 'form',
             component: () => import('@/doc/form.md')
+        }, {
+            path: '/navbar',
+            name: 'navbar',
+            component: () => import('@/doc/navbar.md')
         }
     ]
 })

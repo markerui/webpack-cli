@@ -1,9 +1,11 @@
 import Item from './item/index'
 import Flex from './flex/index'
+import Navbar from './navbar/index'
 
 const components = [
     Item,
     Flex,
+    Navbar
 ]
 
 // 导出 install 函数
@@ -22,5 +24,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
     install,
     Item,
-    Flex
+    Flex,
+    Navbar
 }

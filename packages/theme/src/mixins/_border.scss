@@ -1,0 +1,17 @@
+// border mixin
+@mixin border1px($color) {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: scaleY(0.5);
+    }
+}
