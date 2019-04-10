@@ -1,5 +1,5 @@
 // border mixin
-@mixin border1px($color) {
+@mixin border1px($color:$border-color, $direction:'all') {
     position: relative;
 
     &::after {
@@ -7,11 +7,38 @@
         position: absolute;
         z-index: 1;
         pointer-events: none;
-        background-color: $color;
-        height: 1px;
+
+        @if $direction==all {
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            border: $color 1px solid;
+            transform: scaleY(0.5) scaleX(0.5);
+        }
+
+        @else {
+            background-color: $color;
+            @include borderDirection($direction);
+        }
+
+    }
+}
+
+@mixin borderDirection($direction) {
+    @if $direction==top or $direction==bottom {
+        #{$direction}: 0;
         left: 0;
         right: 0;
-        top: 0;
+        height: 1px;
         transform: scaleY(0.5);
+    }
+
+    @if $direction==right or $direction==left {
+        #{$direction}: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        transform: scaleX(0.5);
     }
 }

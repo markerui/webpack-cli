@@ -40,6 +40,13 @@ module.exports = {
                 use: [
                     'vue-style-loader',
                     'css-loader',
+                    // {
+                    //     loader: 'css-loader',
+                    //     options: {
+                    //         modules: true,
+                    //         localIdentName: '[local]_[hash:base64:8]'
+                    //     }
+                    // },
                     'postcss-loader'
                 ]
             },
@@ -66,17 +73,17 @@ module.exports = {
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        limit: 10000,
+                        limit: 1000,
                         name: 'images/[name].[hash:7].[ext]',
                     }
                 }]
             },
             {
-                test: /\.(woff2|woff|eot|ttf|otf)(\?.*)?$/,
+                test: /\.(woff2|woff|eot|ttf|otf|svg)(\?.*)?$/,
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        limit: 10000,
+                        limit: 1000,
                         name: 'fonts/[name].[hash:7].[ext]',
                     }
                 }]

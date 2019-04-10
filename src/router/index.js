@@ -26,6 +26,10 @@ export default new Router({
             path: '/navbar',
             name: 'navbar',
             component: () => import('@/doc/navbar.md')
+        }, {
+            path: '/iconfont',
+            name: 'iconfont',
+            component: () => import('@/doc/iconfont.md')
         }
     ]
 })

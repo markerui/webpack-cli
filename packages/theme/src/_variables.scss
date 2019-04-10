@@ -12,7 +12,13 @@ $color-danger: #d9534f !default;
 
 //## Font
 $font-size-base: 14 !default;
+$font-weight: 600 !default;
+
+//border
+$border-color: #c4c4c4 !default;
 
 //## navbar 
 $navbar-height: 44 !default;
-$navbar-title-font-size: $font-size-base+2 !default;
+$navbar-font-size: $font-size-base+2 !default;
+$navbar-border-color: $border-color;
+$navbar-bg-color: #f7f7f8;

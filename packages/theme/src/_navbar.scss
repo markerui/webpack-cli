@@ -1,12 +1,51 @@
 .mk-navbar {
-    @include border1px(#000);
-    @include vwHeight(44);
-    background-color: #f0f0ff;
-    align-items: center;
-    align-content: center;
+    @include border1px($navbar-border-color, bottom);
+    @include vwHeight($navbar-height);
+    @include vwFont($navbar-font-size);
+    background-color: $navbar-bg-color;
+    position: relative;
 
     .navbar-title {
-        @include vwFont($navbar-title-font-size);
-        margin: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        h1 {
+            margin: 0;
+            @include vwLineHeight($navbar-height);
+            @include vwFont($navbar-font-size);
+        }
     }
+
+    .navbar-left,
+    .navbar-right {
+        color: $color-primary;
+        position: relative;
+        z-index: 2;
+
+        .item {
+            @include vwLineHeight($navbar-height);
+
+            .iconfont {
+                margin-right: -3px;
+            }
+        }
+    }
+
+    .navbar-left {
+        .item {
+            @include vwPadding('right', 10);
+        }
+    }
+
+    .navbar-right {
+        .item {
+            @include vwPadding('left', 10);
+        }
+    }
+
+
+
+
 }

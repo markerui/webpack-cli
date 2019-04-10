@@ -4,10 +4,13 @@
 
 .container {
     margin: 50px auto;
+    padding: 30px 30px 30px 0;
     width: 90%;
     background-color: #fff;
     box-shadow: 0 4px 30px 0 rgba(223, 225, 230, .5);
     border-radius: 10px;
+
+
 }
 
 .mkui-demo {
@@ -21,10 +24,32 @@
     margin-top: 0;
 }
 
-/* code {
-  background-color: #f9f2f4;
-  color: #c7254e;
-  border-radius: 4px;
-  padding: 2px 4px;
-  font-size: 90%;
-} */
+.mkui-table {
+    border: #f1f1f1 1px solid;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 15px;
+
+    tr,
+    td,
+    th {
+        border: #f1f1f1 1px solid;
+        padding: 10px;
+    }
+
+
+    th,
+    tr:hover {
+        background-color: #f7f7f8;
+    }
+
+    code {
+        background-color: #f9f2f4;
+        color: #c7254e;
+        border-radius: 4px;
+        padding: 2px 4px;
+        font-size: 90%;
+        margin: 0 3px;
+    }
+}

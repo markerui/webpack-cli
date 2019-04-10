@@ -1,0 +1,27 @@
+@import 'font/iconfont'; //引入字体文件
+
+.iconfont {
+    .default {
+        color: $color-default;
+    }
+
+    .primary {
+        color: $color-primary;
+    }
+
+    .success {
+        color: $color-success;
+    }
+
+    .info {
+        color: $color-info;
+    }
+
+    .warning {
+        color: $color-warning;
+    }
+
+    .danger {
+        color: $color-danger;
+    }
+}

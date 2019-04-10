@@ -8,18 +8,26 @@
 }
 
 @mixin vwWidth($width) {
-    width: $width * 1px;
+    min-width: $width * 1px;
 
     @media (max-width: 750px) and (orientation: portrait) {
-        width: vw($width);
+        min-width: vw($width);
     }
 }
 
 @mixin vwHeight($height) {
-    height: $height * 1px;
+    min-height: $height * 1px;
 
     @media (max-width: 750px) and (orientation: portrait) {
-        height: vw($height);
+        min-height: vw($height);
+    }
+}
+
+@mixin vwLineHeight($lineheight) {
+    line-height: $lineheight * 1px;
+
+    @media (max-width: 750px) and (orientation: portrait) {
+        line-height: vw($lineheight);
     }
 }
 
@@ -28,5 +36,13 @@
 
     @media (max-width: 750px) and (orientation: portrait) {
         padding-#{$direction}: vw($size);
+    }
+}
+
+@mixin vwMargin($direction, $size) {
+    margin-#{$direction}: $size*1px;
+
+    @media (max-width: 750px) and (orientation: portrait) {
+        margin-#{$direction}: vw($size);
     }
 }

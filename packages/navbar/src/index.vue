@@ -1,10 +1,19 @@
 <template>
-  <div class="mk-flex mk-navbar block">
-    <div class="left">返回</div>
-    <div class="flex-grow-1 block text-center">
-      <h1 class="navbar-title" v-html="title"></h1>
+  <div
+    class="mk-flex mk-navbar align-items-center align-content-center justify-content-space-between block"
+  >
+    <div class="navbar-left mk-flex" v-if="isLeft" v-on:click="leftSendEvent">
+      <div class="item">
+        <i class="iconfont" :class="leftIconComputed"></i>
+        <span v-html="leftText"></span>
+      </div>
     </div>
-    <div class="right">操作</div>
+    <div class="navbar-title text-center block">
+      <h1 v-html="title"></h1>
+    </div>
+    <div class="navbar-right mk-flex">
+      <slot name="right"></slot>
+    </div>
   </div>
 </template>
 <script>
@@ -13,10 +22,32 @@ export default {
   props: {
     title: {
       type: String
+    },
+    isLeft: {
+      type: Boolean,
+      default: true
+    },
+    leftText: {
+      type: String,
+      default: "返回"
+    },
+    leftIcon: {
+      type: String,
+      default: "left"
     }
   },
   data() {
     return {};
+  },
+  computed: {
+    leftIconComputed() {
+      return "icon-icon_" + this.leftIcon;
+    }
+  },
+  methods: {
+    leftSendEvent() {
+      this.$emit("left_event");
+    }
   }
 };
 </script>

@@ -1,6 +1,8 @@
 // Reset the box-sizing
 * {
     @include box-sizing(border-box);
+    -webkit-font-smoothing: antialiased;
+    transform: perspective(1px) scale(1);
 }
 
 *:before,
@@ -32,4 +34,13 @@ textarea {
 .block {
     @include vwPadding('left', 15);
     @include vwPadding('right', 15);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight;
 }
