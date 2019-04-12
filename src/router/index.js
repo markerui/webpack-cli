@@ -30,6 +30,10 @@ export default new Router({
             path: '/iconfont',
             name: 'iconfont',
             component: () => import('@/doc/iconfont.md')
+        }, {
+            path: '/tabbar',
+            name: 'tabbar',
+            component: () => import('@/doc/tabbar.md')
         }
     ]
 })

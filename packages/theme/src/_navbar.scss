@@ -26,10 +26,6 @@
 
         .item {
             @include vwLineHeight($navbar-height);
-
-            .iconfont {
-                margin-right: -3px;
-            }
         }
     }
 

@@ -5,5 +5,3 @@ Iconfont.install = function (Vue) {
 };
 
 export default Iconfont;
-
-// http: //www.ruanyifeng.com/blog/2015/07/flex-grammar.html 组件参考教程用法

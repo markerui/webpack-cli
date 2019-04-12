@@ -1,13 +1,16 @@
 import Item from './item/index'
 import Flex from './flex/index'
-import Navbar from './navbar/index'
 import Iconfont from './icon/index'
+import Navbar from './navbar/index'
+import Tabbar from './tabbar/index'
+
 
 const components = [
     Item,
     Flex,
+    Iconfont,
     Navbar,
-    Iconfont
+    Tabbar,
 ]
 
 // 导出 install 函数
@@ -27,6 +30,7 @@ export default {
     install,
     Item,
     Flex,
+    Iconfont,
     Navbar,
-    Iconfont
+    Tabbar,
 }

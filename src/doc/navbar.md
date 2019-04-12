@@ -18,12 +18,18 @@
     title="标题" 
     left-text="返回"  
     v-on:left_event="leftGetEvent" >
+    <template v-slot:right>
+        <mk-item class="item">
+            <mk-icon type="add"></mk-icon>
+            <span>保存</span>
+        </mk-item>
+    </template>
 </mk-navbar>
 <script>
 export default {
     methods: {
       leftGetEvent() {
-        alert('你点击了返回按钮')
+        alert('你点击了左侧按钮')
       }
     }
   }
@@ -35,8 +41,13 @@ export default {
 ``` html
 <mk-navbar 
     title="标题" 
-    left-text="返回"  
-    v-on:left_event="leftGetEvent" >
+    left-text="返回"  >
+    <template v-slot:left>
+        <mk-item class="item">
+            <mk-icon type="cloud_history"></mk-icon>
+            <span>云服务</span>
+        </mk-item>
+    </template>
     <template v-slot:right>
         <mk-item class="item">
             <mk-icon type="add"></mk-icon>
@@ -58,5 +69,7 @@ export default {
 
 | 事件 	|   描述 	|
 |--	|------	|
-| left_event  |   左侧点击事件   	|
+| left_event  |   左侧点击事件(自定义组件会失效)	|
+
+
 
