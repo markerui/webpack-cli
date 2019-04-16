@@ -17,7 +17,7 @@
 <mk-navbar 
     title="标题" 
     left-text="返回"  
-    v-on:left_event="leftGetEvent" >
+    @left_event="leftGetEvent" >
     <template v-slot:right>
         <mk-item class="item">
             <mk-icon type="add"></mk-icon>
@@ -55,6 +55,37 @@ export default {
         </mk-item>
     </template>
 </mk-navbar>
+```
+
+
+### 自定义事件
+
+``` html
+<mk-navbar 
+    title="标题" 
+    left-text="返回"  >
+    <template v-slot:left>
+        <mk-item class="item" v-on:click.native="leftGetEvent">
+            <mk-icon type="link"></mk-icon>
+            <span>点击我</span>
+        </mk-item>
+    </template>
+    <template v-slot:right>
+        <mk-item class="item">
+            <mk-icon type="add"></mk-icon>
+            <span>保存</span>
+        </mk-item>
+    </template>
+</mk-navbar>
+<script>
+export default {
+    methods: {
+      leftGetEvent() {
+        alert('你点击了左侧按钮')
+      }
+    }
+  }
+</script>
 ```
 
 
